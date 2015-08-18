@@ -14,7 +14,7 @@ class PostsIndexTest < ActionDispatch::IntegrationTest
 
   test "number of posts" do
     get  '/index'
-    assert_select "p", Post.all.count
+    assert_select "li.post", Post.all.count
   end
 
 end
