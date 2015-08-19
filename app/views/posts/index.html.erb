@@ -3,11 +3,13 @@
   <ul class="posts">
   <% @posts.each do |post| %>
     <li class="post" id="<%= dom_id(post)%>">
-      <%= post.id %>. 
-      <%= post.title %>
-      <p>
+      <h3><%= post.title %></h3>
+      <div class="post_content">
+        <%= post.content %>
+      </div>
+      <div class="post_infos">
         Created at : <%= post.created_at %>
-      </p>
+      </div>
     </li>
   <% end %>
 </ul>
